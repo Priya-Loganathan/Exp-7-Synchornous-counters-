@@ -47,61 +47,61 @@ Program for flipflops  and verify its truth table in quartus using Verilog progr
 Developed by: DELLI PRIYA L
 RegisterNumber: 212222230029 
 ```
-#### UP COUNTER
+UP COUNTER:
 ```
-module upcounter(clock,reset,up);
-input clock,reset;
-output reg[0:2] up;
-always@(posedge clock or posedge reset)
+module upcon(clk,A);
+input clk;
+output reg[0:3]A;
+always@(posedge clk)
 begin
-if(reset)
-up=3'b 000;
-else
-up=up+1;
+	A[0]=((((A[1])&(A[2]))&A[3])^A[0]);
+	A[1]=(((A[2])&(A[3]))^A[1]);
+	A[2]=((A[3])^A[2]);
+	A[3]=1^A[3];
 end
 endmodule
 ```
-
-#### DOWN COUNTER
+DOWNCOUNTER:
 ```
-module DOWN(clock,reset,down);
-input clock,reset;
-output reg[2:0] down;
-always@(posedge clock or posedge reset)
+module downcon(clk,A);
+input clk;
+output reg[0:3]A;
+always@(posedge clk)
 begin
-if(reset)
-down=3'b 111;
-else
-down=down-1;
+	A[0]=((((~A[1])&(~A[2]))&A[3])^A[0]);
+	A[1]=(((A[2])&(A[3]))^A[1]);
+	A[2]=((A[3])^A[2]);
+	A[3]=1^A[3];
 end
 endmodule
 ```
-
 ### OUTPUT
 
-### RTL LOGIC COUNTER   
+### RTL LOGIC COUNTER
 
 #### UP COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/2a3de41f-01ea-4f7b-a799-cf57eba644b1)
+
+![1](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/bbf251b4-e82f-4bfd-bb58-790a2f9a050f)
 
  #### DOWN COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/26c8f912-0de1-4a8d-905a-998077c43d87)
+ 
+![2](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/136e4dc4-85df-404d-9113-d5f7c803298c)
 
 ### TIMING DIGRAMS FOR COUNTER  
 
 #### UP COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/4f9c10c4-f59a-4a87-a6be-9e4b7e792db9)
+![Uploading 3.png…]()
 
 #### DOWN COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/f3dcb783-d93a-44ef-adbd-b6ccc4502dfb)
+![4](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/52606920-a262-48d5-8711-a3f0899eff1a)
 
 ### TRUTH TABLE 
 
 #### UP COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/199a2310-ccd7-4226-8c49-accdab26a1f9)
+![5](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/2381b573-53fe-4474-8115-2c5a680ba499)
 
 #### DOWN COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/4ac23d73-b3df-4630-a4ed-2b539214d211)
+![6](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/104352d8-6560-4e52-a01f-438731a2b0e0)
 
 ### RESULTS 
 Thus 3 bit up and down counters is implemented and its functionality is validated.
