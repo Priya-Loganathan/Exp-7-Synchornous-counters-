@@ -90,7 +90,7 @@ endmodule
 ### TIMING DIGRAMS FOR COUNTER  
 
 #### UP COUNTER
-![Uploading 3.png…]()
+
 
 #### DOWN COUNTER
 ![4](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/52606920-a262-48d5-8711-a3f0899eff1a)
