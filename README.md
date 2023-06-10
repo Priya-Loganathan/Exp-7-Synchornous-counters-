@@ -63,17 +63,18 @@ endmodule
 ```
 DOWNCOUNTER:
 ```
-module downcon(clk,A);
-input clk;
-output reg[0:3]A;
-always@(posedge clk)
+module down(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_down;
+always@(posedge clk or posedge reset)
 begin
-	A[0]=((((~A[1])&(~A[2]))&A[3])^A[0]);
-	A[1]=(((A[2])&(A[3]))^A[1]);
-	A[2]=((A[3])^A[2]);
-	A[3]=1^A[3];
+if(reset)
+counter_down<=4'd0;
+else
+counter_down<=counter_down-4'd1;
 end
+assign counter=counter_down;
 endmodule
+
 ```
 ### OUTPUT
 
@@ -85,7 +86,7 @@ endmodule
 
  #### DOWN COUNTER
  
-![2](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/136e4dc4-85df-404d-9113-d5f7c803298c)
+
 
 ### TIMING DIGRAMS FOR COUNTER  
 
@@ -93,7 +94,6 @@ endmodule
 
 
 #### DOWN COUNTER
-![4](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/52606920-a262-48d5-8711-a3f0899eff1a)
 
 ### TRUTH TABLE 
 
