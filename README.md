@@ -88,7 +88,7 @@ endmodule
 ### TIMING DIGRAMS FOR COUNTER  
 
 #### UP COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/d726aa16-91b9-4094-965c-387bf820ccc7)
+![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/498871ec-1e7b-47e4-8e46-2fd8caa8b128)
 #### DOWN COUNTER
 ![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/aad4009e-6df7-4e21-b9f7-365b9d462616)
 
