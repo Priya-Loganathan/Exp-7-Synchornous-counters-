@@ -74,9 +74,8 @@ begin
 	A[3]=1^A[3];
 end
 endmodule
-RTL LOGIC 
-
 ```
+
 ### OUTPUT
 
 ### RTL LOGIC COUNTER
