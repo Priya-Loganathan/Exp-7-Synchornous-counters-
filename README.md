@@ -63,17 +63,18 @@ endmodule
 ```
 DOWNCOUNTER:
 ```
-module down(input clk,input reset,output[0:3]counter);
-reg[0:3] counter_down;
-always@(posedge clk or posedge reset)
+module downcon(clk,A);
+input clk;
+output reg[0:3]A;
+always@(posedge clk)
 begin
-if(reset)
-counter_down<=4'd0;
-else
-counter_down<=counter_down-4'd1;
+	A[0]=((((~A[1])&(~A[2]))&A[3])^A[0]);
+	A[1]=(((A[2])&(A[3]))^A[1]);
+	A[2]=((A[3])^A[2]);
+	A[3]=1^A[3];
 end
-assign counter=counter_down;
 endmodule
+RTL LOGIC 
 
 ```
 ### OUTPUT
@@ -82,15 +83,15 @@ endmodule
 
 #### UP COUNTER
 ![1](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/bbf251b4-e82f-4bfd-bb58-790a2f9a050f)
- #### DOWN COUNTER
- ![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/99e7059d-5317-4838-ae85-437ca0769203)
+#### DOWN COUNTER
+![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/6325e04e-0613-4b29-908a-293c4d416b85)
 
 ### TIMING DIGRAMS FOR COUNTER  
 
 #### UP COUNTER
 ![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/d726aa16-91b9-4094-965c-387bf820ccc7)
 #### DOWN COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/1ed9ef26-6c04-4361-a093-d2e61e6c5617)
+![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/aad4009e-6df7-4e21-b9f7-365b9d462616)
 
 ### TRUTH TABLE 
 
