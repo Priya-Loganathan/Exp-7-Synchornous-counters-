@@ -83,14 +83,14 @@ endmodule
 #### UP COUNTER
 ![1](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/bbf251b4-e82f-4bfd-bb58-790a2f9a050f)
 #### DOWN COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/6325e04e-0613-4b29-908a-293c4d416b85)
+![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/51043fef-8656-44a1-88f1-2d0b6f3920c1)
 
 ### TIMING DIGRAMS FOR COUNTER  
 
 #### UP COUNTER
 ![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/498871ec-1e7b-47e4-8e46-2fd8caa8b128)
 #### DOWN COUNTER
-![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/aad4009e-6df7-4e21-b9f7-365b9d462616)
+![image](https://github.com/Priya-Loganathan/Exp-7-Synchornous-counters-/assets/121166075/5a044374-dacb-41f2-bb6b-5aeb5558ba09)
 
 ### TRUTH TABLE 
 
